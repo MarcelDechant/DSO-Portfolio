@@ -131,10 +131,6 @@ const config: Config = {
               label: 'GitHub',
               href: 'https://github.com/facebook/docusaurus',
             },
-            ...blogEnabled && [{
-              label: 'Blog',
-              to: '/blog',
-            }],
           ],
         },
       ],
