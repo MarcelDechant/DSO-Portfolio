@@ -88,11 +88,7 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {
-          href: 'https://github.com/spmse/dev-blog-template',
-          label: 'Github',
-          position: 'right',
-        },
+      
       ],
     },
     footer: {
@@ -110,10 +106,10 @@ const config: Config = {
         {
           title: 'Community',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
+            // {
+            //   label: 'Stack Overflow',
+            //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            // },
             {
               label: 'Discord',
               href: 'https://discordapp.com/invite/docusaurus',
