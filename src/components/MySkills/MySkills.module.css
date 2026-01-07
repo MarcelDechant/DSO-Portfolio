@@ -1,0 +1,36 @@
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.skills {
+    padding-top: 60px;
+    padding-bottom: 72px;
+    padding-inline: 16px;
+    background-color: #262e34;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1176px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.skillSection {
+  width: 100%;
+  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

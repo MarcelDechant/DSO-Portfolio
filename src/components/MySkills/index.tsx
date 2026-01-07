@@ -1,12 +1,20 @@
 import clsx from 'clsx';
 
+import styles from './MySkills.module.css';
+import { skillsData } from './SkillsData';
+import SkillCard from './SkillCard';
 
-
-export default function MySkills() {
+export default function Skills() {
   return (
-    <section style={{ padding: '100px 0', textAlign: 'center', background: '#f0f0f0' }}>
-      <h1>MySkills SECTION</h1>
-      <p>Hier kommt später dein Figma-MySkills rein</p>
+    <section id="skills" className={styles.skills}>
+      <div className={styles.container}>
+        <h2>My Skills</h2>
+        <div className={styles.skillSection}>
+          {skillsData.map((skill, index) => (
+            <SkillCard key={index} skill={skill} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
