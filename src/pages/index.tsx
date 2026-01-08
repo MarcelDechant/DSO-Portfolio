@@ -1,6 +1,6 @@
 
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 
 
 import Hero from '@site/src/components/Hero';
@@ -13,11 +13,16 @@ import Footer from '@site/src/components/Footer';
 
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+    <>
+      <Head>
+        <title>Mein Portfolio – Marcel Dechant</title>
+        <meta
+          name="description"
+          content="Portfolio von Marcel Dechant – Webentwicklung, Projekte, Skills"
+        />
+      </Head>
       <Header />
       <main>
         <Hero />
@@ -26,6 +31,6 @@ export default function Home(): JSX.Element {
         <Contact />
       </main>
       <Footer />
-    </Layout>
+    </>
   );
 }
