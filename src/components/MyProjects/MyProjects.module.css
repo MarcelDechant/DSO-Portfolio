@@ -1,0 +1,201 @@
+.myProjects {
+  padding-top: 60px;
+  padding-bottom: 72px;
+  padding-inline: 16px;
+  background-color: #266ad9;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1176px;
+}
+
+.wrapper {
+  padding-top: 64px;
+  display: flex;
+  gap: 40px;
+}
+
+/* =====================
+   LEFT: Project list
+===================== */
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 256px;
+}
+
+.projectButton {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #ddd;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 24px;
+  transform-origin: left;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.projectButton:hover {
+  transform: scaleX(1.02);
+  color: #ffffff;
+}
+
+.active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.projectId {
+  opacity: 0.7;
+}
+
+.projectTitle {
+  text-decoration: none;
+}
+
+.moreButton {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/* =====================
+   RIGHT: Project detail
+===================== */
+
+.projectDetail {
+  width: 913px;
+  background: #2f4563;
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detailsTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  width: 45%;
+}
+
+/* =====================
+   Icons
+===================== */
+
+.iconsWrapper {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.iconBox {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  background-color: #ffffff;
+  color: #262e34;
+  border-radius: 10px;
+  gap: 6px;
+  max-width: 140px;
+}
+
+.iconSvg {
+  width: 32px;
+  height: 32px;
+}
+
+.iconPng {
+  height: 32px;
+}
+
+.iconTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+/* =====================
+   Bottom section
+===================== */
+
+.detailsBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.projectImg {
+  width: 355px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.detailText {
+  width: 456px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 125%;
+  padding-left: 10px;
+}
+
+/* =====================
+   Links
+===================== */
+
+.projectLinks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.projectDoc {
+  background-color: #266ad9;
+  border-radius: 30px;
+  padding: 14px 20px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.projectDoc:hover {
+  background-color: #5696ff;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.projectGit {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  padding: 14px 20px;
+  color: #ffffff;
+}
+
+.projectGit:hover {
+  background-color: #ffffff10;
+  text-decoration: none;
+  color: #ffffff;
+}

@@ -6,7 +6,7 @@ import ShellLogo from "../../assets/skillsimgs/shell.svg";
 import YamlLogo from "../../assets/skillsimgs/yaml.svg";
 import DockerLogo from "../../assets/skillsimgs/docker.svg";
 import GithubLogo from "../../assets/skillsimgs/CICD.svg";
-import SecLogo from "../../assets/skillsimgs/abc.png";
+import SecLogo from "../../assets/skillsimgs/seclogo.png";
 
 export interface Skill {
   name: string;
