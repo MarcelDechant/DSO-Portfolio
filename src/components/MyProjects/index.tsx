@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 
+import arrow from "../../assets/projectsimgs/arrow.png";
 import React, { useState } from "react";
 import styles from "./MyProjects.module.css";
 import Link from "@docusaurus/Link";
@@ -37,6 +38,7 @@ const Projects: React.FC = () => {
             ))}
 
             <Link to="/docs/projects/overview" className={styles.projectButton}>
+              <img src={arrow} className={styles.arrowIcon} />
               <span className={styles.moreButton}>See more projects</span>
             </Link>
           </div>

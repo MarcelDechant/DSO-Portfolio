@@ -1,12 +1,34 @@
-import clsx from 'clsx';
+import React from "react";
+import Link from "@docusaurus/Link";
+import styles from "./Footer.module.css";
 
-
-
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
-    <section style={{ padding: '100px 0', textAlign: 'center', background: '#f0f0f0' }}>
-      <h1>Footer SECTION</h1>
-      <p>Hier kommt später dein Figma-Footer rein</p>
-    </section>
+    <footer id="footer" className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <Link
+            to="#about"
+            className={styles.upArrowLink}
+
+          >
+            <img
+              className={styles.upArrow}
+              src={require("../../assets/projectsimgs/upArrow.png").default}
+              alt="UP"
+            />
+          </Link>
+          <p>© Marcel Dechant 2026</p>
+          <a className={styles.footerLinks} href="./privacy">
+            Privacy Police
+          </a>
+          <a className={styles.footerLinks} href="./imprint">
+            Imprint
+          </a>
+        </div>
+      </div>
+    </footer>
   );
-}
+};
+
+export default Footer;

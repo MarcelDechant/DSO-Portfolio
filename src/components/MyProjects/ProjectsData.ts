@@ -60,7 +60,7 @@ export const projects: Project[] = [
       { type: "svg", icon: SHELL, title: "Shell" },
       { type: "svg", icon: CONTAINER, title: "Container" },
     ],
-    doc: "/docs/projects/baby-tools-shop",
+    doc: "/docs/projects/baby-tools-ecommerce",
     git: "https://github.com/MarcelDechant/baby-tools-shop",
   },
   {
@@ -87,7 +87,7 @@ export const projects: Project[] = [
       { type: "img", icon: ITSEC, title: "IT Security" },
       { type: "svg", icon: PYTHON, title: "Python" },
     ],
-    doc: "/docs/projects/owasp-juice-shop",
+    doc: "/docs/projects/owasp-juice-shop-security",
     git: "https://github.com/MarcelDechant/Juice_shop",
   },
   {
