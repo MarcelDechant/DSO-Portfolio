@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <Link
-            to="#about"
+            to="/#about"
             className={styles.upArrowLink}
 
           >

@@ -1,3 +1,4 @@
+import type { ComponentType, SVGProps } from "react";
 import HtmlLogo from "../../assets/skillsimgs/html.svg";
 import CssLogo from "../../assets/skillsimgs/CSS.svg";
 import DocuLogo from "../../assets/skillsimgs/docu.svg";
@@ -10,7 +11,7 @@ import SecLogo from "../../assets/skillsimgs/seclogo.png";
 
 export interface Skill {
   name: string;
-  logo: any; // ReactComponent oder string (PNG)
+  logo: ComponentType<SVGProps<SVGSVGElement>> | string;
   isSvg: boolean;
   descHead: string;
   descText: string[];

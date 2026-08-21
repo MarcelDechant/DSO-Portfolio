@@ -24,10 +24,16 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
                 {/* Vorderseite */}
                 <div className={styles.skillCardFront}>
                     {skill.isSvg ? (
-                        <skill.logo className={styles.skillImg} />
+                        (() => {
+                            const Logo = skill.logo as React.ComponentType<
+                                React.SVGProps<SVGSVGElement>
+                            >;
+
+                            return <Logo className={styles.skillImg} />;
+                        })()
                     ) : (
                         <img
-                            src={skill.logo}
+                            src={skill.logo as string}
                             alt={skill.name}
                             className={styles.skillPng}
                         />

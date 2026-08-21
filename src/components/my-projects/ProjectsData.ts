@@ -102,7 +102,7 @@ export const projects: Project[] = [
       { type: "img", icon: ITSEC, title: "IT Security" },
       { type: "svg", icon: CONTAINER, title: "Container" },
     ],
-    doc: "/docs/projects/minecraft-server",
+    doc: "/docs/projects/minecraft-server-docker",
     git: "https://github.com/MarcelDechant/minecraft_server",
   },
   {
@@ -116,7 +116,7 @@ export const projects: Project[] = [
       { type: "svg", icon: CONTAINER, title: "Container" },
       { type: "img", icon: ITSEC, title: "IT Security" },
     ],
-    doc: "/docs/projects/wordpress-multi-container-setup",
+    doc: "/docs/projects/wordpress-containerization",
     git: "https://github.com/MarcelDechant/Wordpress_docker",
   },
 ];

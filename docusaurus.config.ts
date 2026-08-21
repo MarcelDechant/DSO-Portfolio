@@ -9,12 +9,12 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
-  title: 'DSO Live Demo Docs',
-  tagline: 'Dinosaurs are cool',
+  title: 'Marcel Dechant – DevSecOps Portfolio',
+  tagline: 'DevSecOps Engineer Portfolio',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://spmse.github.io",
+  url: process.env.DEPLOYMENT_URL ?? "https://marceldechant.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.BASE_URL ?? "/",
@@ -27,6 +27,7 @@ const config: Config = {
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
 
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -46,7 +47,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spmse/dev-blog-template',
+            'https://github.com/MarcelDechant/DSO-Portfolio',
         },
         blog: blogEnabled ? 
           {
@@ -58,7 +59,7 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              'https://github.com/spmse/dev-blog-template',
+              'https://github.com/MarcelDechant/DSO-Portfolio',
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
@@ -76,9 +77,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Marcel Dechant',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Marcel Dechant Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -106,10 +107,6 @@ const config: Config = {
         {
           title: 'Community',
           items: [
-            // {
-            //   label: 'Stack Overflow',
-            //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            // },
             {
               label: 'Discord',
               href: 'https://discordapp.com/invite/docusaurus',
@@ -130,7 +127,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sven Patrick Meier (spmse). Built with Docusaurus and 💚.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Marcel Dechant. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

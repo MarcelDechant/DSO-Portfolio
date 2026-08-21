@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "@docusaurus/Head";
-import Header from "../components/Header/index";
-import Contact from "../components/Contact/index";
-import Footer from "../components/Footer/index";
+import Header from "../components/header/index";
+import Contact from "../components/contact/index";
+import Footer from "../components/footer/index";
 import Privacy from "../components/privacy/index";
 
 const Home: React.FC = () => {
