@@ -1,201 +1,473 @@
 .myProjects {
-  padding-top: 60px;
-  padding-bottom: 72px;
-  padding-inline: 16px;
-  background-color: #266ad9;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 72px;
+    padding-inline: 16px;
+    background-color: #266ad9;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-  width: 100%;
-  max-width: 1176px;
+    width: 100%;
+    max-width: 1176px;
 }
 
 .wrapper {
-  padding-top: 64px;
-  display: flex;
-  gap: 40px;
+    padding-top: 64px;
+    display: flex;
+    gap: 40px;
 }
+
 
 /* =====================
    LEFT: Project list
 ===================== */
 
 .projectList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 256px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 256px;
+    flex-shrink: 0;
 }
 
 .projectButton {
-  background: transparent;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #ddd;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 24px;
-  transform-origin: left;
-  transition: transform 0.15s ease, color 0.15s ease;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ddd;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 24px;
+    transform-origin: left;
+    transition: transform 0.15s ease, color 0.15s ease;
 }
 
 .projectButton:hover {
-  transform: scaleX(1.02);
-  color: #ffffff;
+    transform: scaleX(1.02);
+    color: #ffffff;
 }
 
 .active {
-  color: #ffffff;
-  text-decoration: underline;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .projectId {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .projectTitle {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .moreButton {
-  text-decoration: underline;
-  font-size: 20px;
+    text-decoration: underline;
+    font-size: 20px;
 }
+
 
 /* =====================
    RIGHT: Project detail
 ===================== */
 
 .projectDetail {
-  width: 913px;
-  background: #2f4563;
-  padding: 30px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+    width: 913px;
+    background: #2f4563;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
 }
 
 .detailsTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .h3 {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 120%;
-  width: 45%;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    width: 45%;
 }
+
 
 /* =====================
    Icons
 ===================== */
 
 .iconsWrapper {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .iconBox {
-  height: 44px;
-  display: flex;
-  align-items: center;
-  padding: 6px 10px;
-  background-color: #ffffff;
-  color: #262e34;
-  border-radius: 10px;
-  gap: 6px;
-  max-width: 140px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #262e34;
+    border-radius: 10px;
+    gap: 6px;
+    max-width: 140px;
 }
 
 .iconSvg {
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .iconPng {
-  height: 32px;
+    height: 32px;
 }
 
 .iconTitle {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
 }
+
 
 /* =====================
    Bottom section
 ===================== */
 
 .detailsBottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 .projectImg {
-  width: 355px;
-  border-radius: 30px;
-  object-fit: cover;
+    width: 355px;
+    max-width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
 }
 
 .detailText {
-  width: 456px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    width: 456px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .description {
-  font-size: 20px;
-  line-height: 125%;
-  padding-left: 10px;
+    font-size: 20px;
+    line-height: 125%;
+    padding-left: 10px;
 }
+
 
 /* =====================
    Links
 ===================== */
 
 .projectLinks {
-  display: flex;
-  justify-content: flex-end;
-  gap: 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
 }
 
 .projectDoc {
-  background-color: #266ad9;
-  border-radius: 30px;
-  padding: 14px 20px;
-  color: #ffffff;
-  font-size: 20px;
+    background-color: #266ad9;
+    border-radius: 30px;
+    padding: 14px 20px;
+    color: #ffffff;
+    font-size: 20px;
 }
 
 .projectDoc:hover {
-  background-color: #5696ff;
-  text-decoration: none;
-  color: #ffffff;
+    background-color: #5696ff;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .projectGit {
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 30px;
-  padding: 14px 20px;
-  color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 14px 20px;
+    color: #ffffff;
 }
 
 .projectGit:hover {
-  background-color: #ffffff10;
-  text-decoration: none;
-  color: #ffffff;
+    background-color: #ffffff10;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1100px) {
+    .wrapper {
+        gap: 25px;
+    }
+
+    .projectList {
+        width: 220px;
+    }
+
+    .projectButton {
+        font-size: 21px;
+    }
+
+    .projectDetail {
+        width: auto;
+        flex: 1;
+        padding: 25px;
+    }
+
+    .h3 {
+        font-size: 34px;
+    }
+
+    .detailsBottom {
+        gap: 20px;
+    }
+
+    .projectImg {
+        width: 45%;
+    }
+
+    .detailText {
+        width: 55%;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================
+   Small Tablet
+========================= */
+
+@media (max-width: 768px) {
+    .myProjects {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+
+    .container h2 {
+        font-size: 46px;
+        text-align: center;
+    }
+
+    .wrapper {
+        padding-top: 45px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .projectList {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .projectButton {
+        font-size: 19px;
+    }
+
+    .moreButton {
+        font-size: 18px;
+    }
+
+    .projectDetail {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .detailsTop {
+        align-items: flex-start;
+    }
+
+    .h3 {
+        font-size: 32px;
+        width: 40%;
+    }
+
+    .iconsWrapper {
+        max-width: 55%;
+    }
+
+    .detailsBottom {
+        flex-direction: column;
+    }
+
+    .projectImg {
+        width: 100%;
+        max-height: 350px;
+    }
+
+    .detailText {
+        width: 100%;
+    }
+
+    .description {
+        padding-left: 0;
+        font-size: 18px;
+    }
+
+    .projectLinks {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+}
+
+
+/* =========================
+   Smartphone
+========================= */
+
+@media (max-width: 600px) {
+    .myProjects {
+        padding-top: 35px;
+        padding-bottom: 45px;
+        padding-inline: 16px;
+    }
+
+    .container h2 {
+        font-size: 40px;
+        line-height: 1.15;
+    }
+
+    .wrapper {
+        padding-top: 35px;
+        gap: 25px;
+    }
+
+    .projectList {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .projectButton {
+        font-size: 18px;
+    }
+
+    .moreButton {
+        font-size: 17px;
+    }
+
+    .projectDetail {
+        padding: 20px;
+        border-radius: 14px;
+        gap: 20px;
+    }
+
+    .detailsTop {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .h3 {
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .iconsWrapper {
+        max-width: 100%;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .iconBox {
+        height: 40px;
+        padding: 5px 8px;
+    }
+
+    .iconSvg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .iconPng {
+        height: 28px;
+    }
+
+    .iconTitle {
+        font-size: 12px;
+    }
+
+    .detailsBottom {
+        gap: 20px;
+    }
+
+    .projectImg {
+        width: 100%;
+        max-height: 280px;
+        border-radius: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .projectLinks {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .projectDoc,
+    .projectGit {
+        font-size: 17px;
+        padding: 12px 18px;
+    }
+}
+
+
+/* =========================
+   Very small smartphones
+========================= */
+
+@media (max-width: 400px) {
+    .container h2 {
+        font-size: 34px;
+    }
+
+    .projectDetail {
+        padding: 16px;
+    }
+
+    .h3 {
+        font-size: 25px;
+    }
+
+    .projectButton {
+        font-size: 17px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .projectImg {
+        max-height: 240px;
+    }
+
+    .projectDoc,
+    .projectGit {
+        font-size: 16px;
+        padding: 11px 16px;
+    }
 }

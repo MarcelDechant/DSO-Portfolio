@@ -18,6 +18,7 @@
 }
 
 /* LEFT */
+
 .left {
     display: flex;
     flex-direction: column;
@@ -54,6 +55,7 @@
 }
 
 /* BUTTON */
+
 .aboutLink {
     font-size: 20px;
     font-weight: 600;
@@ -83,6 +85,7 @@
 
 
 /* RIGHT */
+
 .right {
     height: clamp(300px, 33vw, 479px);
     width: auto;
@@ -97,4 +100,176 @@
     height: clamp(300px, 33vw, 479px);
     width: auto;
     min-width: 240px;
+}
+
+
+/* =========================
+   Tablet
+   ========================= */
+
+@media (max-width: 1000px) {
+    .container {
+        gap: 50px;
+    }
+
+    .left {
+        max-width: 560px;
+    }
+
+    .greeting {
+        font-size: 26px;
+    }
+
+    .name {
+        font-size: 64px;
+    }
+
+    .role {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 19px;
+    }
+
+    .right {
+        height: 360px;
+    }
+
+    .profilePic {
+        height: 360px;
+        min-width: 0;
+    }
+}
+
+
+/* =========================
+   Small Tablet
+   ========================= */
+
+@media (max-width: 768px) {
+    .about {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .left {
+        max-width: 650px;
+        align-items: center;
+    }
+
+    .greeting {
+        font-size: 24px;
+    }
+
+    .name {
+        font-size: 56px;
+    }
+
+    .role {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .right {
+        height: 320px;
+    }
+
+    .profilePic {
+        height: 320px;
+    }
+}
+
+
+/* =========================
+   Smartphone
+   ========================= */
+
+@media (max-width: 600px) {
+    .about {
+        padding-top: 35px;
+        padding-bottom: 45px;
+        padding-inline: 16px;
+    }
+
+    .container {
+        gap: 35px;
+    }
+
+    .greeting {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .name {
+        font-size: 42px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+
+    .role {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 28px;
+    }
+
+    .right {
+        height: 280px;
+        border-radius: 24px;
+    }
+
+    .profilePic {
+        height: 280px;
+    }
+
+    .aboutLink {
+        width: 145px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+
+/* =========================
+   Very small smartphones
+   ========================= */
+
+@media (max-width: 400px) {
+    .name {
+        font-size: 36px;
+    }
+
+    .greeting {
+        font-size: 18px;
+    }
+
+    .role {
+        font-size: 19px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .right {
+        height: 240px;
+    }
+
+    .profilePic {
+        height: 240px;
+    }
 }

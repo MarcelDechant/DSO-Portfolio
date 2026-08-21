@@ -49,7 +49,9 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
-    if: ${{ github.ref_name == github.event.repository.default_branch }}
+    # if: ${{ github.ref_name == github.event.repository.default_branch }}
+
+    if: ${{ github.ref_name == 'development' }} # Temporär für die Einreichung
 
     environment:
       name: github-pages
