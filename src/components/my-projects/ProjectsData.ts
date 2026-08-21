@@ -12,7 +12,7 @@ import JuiceShopImg from "../../assets/projectsimgs/juiceshop.png";
 import YAML from "../../assets/projectsimgs/yamlblack.svg";
 import SHELL from "../../assets/projectsimgs/shellblack.svg";
 import PYTHON from "../../assets/projectsimgs/python.svg";
-import ITSEC from "../../assets/projectsimgs/secLogo.png";
+import ITSEC from "../../assets/projectsimgs/seclogo.png";
 import CONTAINER from "../../assets/projectsimgs/docker.svg";
 
 /* =====================

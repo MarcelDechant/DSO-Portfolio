@@ -1,11 +1,11 @@
 import type { ComponentType, SVGProps } from "react";
-import HtmlLogo from "../../assets/skillsimgs/html.svg";
+import HtmlLogo from "../../assets/skillsimgs/HTML.svg";
 import CssLogo from "../../assets/skillsimgs/CSS.svg";
-import DocuLogo from "../../assets/skillsimgs/docu.svg";
-import PythonLogo from "../../assets/skillsimgs/python.svg";
-import ShellLogo from "../../assets/skillsimgs/shell.svg";
-import YamlLogo from "../../assets/skillsimgs/yaml.svg";
-import DockerLogo from "../../assets/skillsimgs/docker.svg";
+import DocuLogo from "../../assets/skillsimgs/Docu.svg";
+import PythonLogo from "../../assets/skillsimgs/Python.svg";
+import ShellLogo from "../../assets/skillsimgs/Shell.svg";
+import YamlLogo from "../../assets/skillsimgs/YAML.svg";
+import DockerLogo from "../../assets/skillsimgs/Docker.svg";
 import GithubLogo from "../../assets/skillsimgs/CICD.svg";
 import SecLogo from "../../assets/skillsimgs/seclogo.png";
 
