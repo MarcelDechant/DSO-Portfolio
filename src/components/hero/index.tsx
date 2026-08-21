@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import clsx from 'clsx';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './Hero.module.css';
 
 
@@ -36,7 +37,7 @@ export default function Hero() {
         <div className={styles.right}>
           <img
             className={styles.profilePic}
-            src="/img/profilbild.png" 
+            src={useBaseUrl('/img/profilbild.png')}
             alt="Profile picture of Marcel Dechant"
           />
         </div>
