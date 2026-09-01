@@ -40,6 +40,7 @@ The main purpose of the repository is to present my technical experience and dem
   - [Important Directories and Files](#important-directories-and-files)
   - [Deployment](#deployment)
     - [GitHub Pages](#github-pages)
+    - [Deployment Configuration](#deployment-configuration)
     - [NGINX](#nginx)
 
 ## Quickstart
@@ -77,11 +78,13 @@ Start the local development server:
 ```bash
 pnpm start
 ```
+
 The portfolio will then be available locally at:
 
-```bash
+```text
 http://localhost:3000
 ```
+
 ## Usage
 
 ### Local Development
@@ -96,13 +99,13 @@ The development server automatically reloads the application when changes are ma
 
 React components can be modified in:
 
-```bash
+```text
 src/components/
 ```
 
 The main portfolio page is located at:
 
-```bash
+```text
 src/pages/index.tsx
 ```
 
@@ -116,7 +119,7 @@ pnpm build
 
 The generated static files are stored in:
 
-```bash
+```text
 build/
 ```
 
@@ -126,15 +129,17 @@ The generated files can then be deployed to a static web server or hosting platf
 
 Individual projects are documented in:
 
-```bash
+```text
 docs/projects/
 ```
+
 New project documentation can be added as Markdown files.
 
 For example:
 
 ```text
 docs/projects/
+
 ├── baby-tools-ecommerce.md
 ├── truck-signs-api.md
 ├── owasp-juice-shop-security.md
@@ -146,13 +151,56 @@ docs/projects/
 
 The main Docusaurus configuration is located in:
 
-```bash
+```text
 docusaurus.config.ts
 ```
 
-This file contains configuration for the site title, URL, deployment settings and other Docusaurus options.
+The project uses environment variables for deployment-specific configuration.
 
-Environment-specific configuration can be provided using environment variables where required.
+For local development, the environment configuration is stored in:
+
+```text
+.env
+```
+
+The `.env` file is not committed to the repository.
+
+For GitHub Actions, the required configuration values are stored as **GitHub Actions Repository Variables**. During the workflow, these variables are used to create the `.env` file dynamically before the Docusaurus build.
+
+The following repository variables are currently used:
+
+| Variable | Purpose |
+|---|---|
+| `BLOG_ENABLED` | Enables or disables the Docusaurus blog |
+| `DEPLOYMENT_URL` | Production URL of the website |
+| `DEPLOYMENT_BRANCH` | Target branch used for deployment configuration |
+| `BASE_URL` | Base path of the deployed website |
+| `PORTFOLIO_GITHUB_ORG` | GitHub organization or username |
+| `PORTFOLIO_GITHUB_PROJECT` | GitHub repository name |
+
+No sensitive information is stored in these variables. If sensitive configuration is required in the future, **GitHub Actions Secrets** should be used instead.
+
+The GitHub Actions workflow is located at:
+
+```text
+.github/workflows/deploy.yaml
+```
+
+During the GitHub Actions build, the workflow creates the `.env` file dynamically.
+
+The configuration flow is:
+
+```text
+GitHub Actions Repository Variables
+                ↓
+        generated .env
+                ↓
+      Docusaurus build
+                ↓
+        GitHub Pages
+```
+
+This keeps deployment configuration outside of the source code while allowing the same project configuration to be used in different deployment environments.
 
 ## Repository Structure
 
@@ -160,6 +208,7 @@ The repository is organized as follows:
 
 ```text
 DSO-Portfolio/
+
 │
 ├── docs/
 │   └── projects/
@@ -194,9 +243,23 @@ DSO-Portfolio/
 
 ### GitHub Pages
 
-The portfolio can be deployed to GitHub Pages using the Docusaurus deployment command.
+The portfolio is deployed to GitHub Pages using the configured GitHub Actions workflow.
 
-After configuring the GitHub Pages settings in docusaurus.config.ts, the project can be deployed using:
+The workflow is responsible for:
+
+1. Installing the project dependencies.
+2. Creating the `.env` file from GitHub Actions Repository Variables.
+3. Running the TypeScript type check.
+4. Building the Docusaurus project.
+5. Deploying the generated `build/` directory to GitHub Pages.
+
+The workflow is located at:
+
+```text
+.github/workflows/deploy.yaml
+```
+
+For local deployment using the Docusaurus deployment command, the following can be used:
 
 ```bash
 pnpm deploy
@@ -214,15 +277,23 @@ Alternatively, a GitHub username can be provided:
 GIT_USER=<your-github-username> pnpm deploy
 ```
 
-The project can also be deployed automatically through the configured GitHub Actions workflow.
+### Deployment Configuration
+
+The deployment configuration is controlled through environment variables.
+
+For the current development and submission setup, the GitHub Actions workflow can use a dedicated development branch for deployment.
+
+After the project has been approved, the deployment configuration can be switched back to the `main` branch and the production base URL can be adjusted accordingly.
+
+This allows the project to be tested and submitted without changing the final production configuration prematurely.
 
 ### NGINX
 
-The generated contents of the build/ directory can also be deployed to an NGINX web server.
+The generated contents of the `build/` directory can also be deployed to an NGINX web server.
 
 The project contains additional documentation for deploying Docusaurus with Docker and NGINX:
 
-```bash
+```text
 docs/guides/deploy-docusaurus-with-docker-and-nginx.md
 ```
 
@@ -234,5 +305,6 @@ Build the project:
 pnpm build
 ```
 
-Copy the generated contents of the build/ directory to the web server.
+Copy the generated contents of the `build/` directory to the web server.
+
 Configure NGINX to serve the generated static files.
