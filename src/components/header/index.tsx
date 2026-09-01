@@ -15,6 +15,8 @@ export default function Header() {
               href={`${siteConfig.baseUrl}#about`}
             >
               About me
+
+              
             </a>
             <a
               className={clsx(styles.navLink)}
