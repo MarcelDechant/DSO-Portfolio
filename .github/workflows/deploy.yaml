@@ -30,7 +30,13 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Create .env config file
-        run: cp example.env .env
+        run: |
+          echo "BLOG_ENABLED=${{ vars.BLOG_ENABLED }}" >> .env
+          echo "DEPLOYMENT_URL=${{ vars.DEPLOYMENT_URL }}" >> .env
+          echo "DEPLOYMENT_BRANCH=${{ vars.DEPLOYMENT_BRANCH }}" >> .env
+          echo "BASE_URL=${{ vars.BASE_URL }}" >> .env
+          echo "GITHUB_ORG=${{ vars.PORTFOLIO_GITHUB_ORG }}" >> .env
+          echo "GITHUB_PROJECT=${{ vars.PORTFOLIO_GITHUB_PROJECT }}" >> .env
 
       - name: TypeScript type check
         run: pnpm typecheck
