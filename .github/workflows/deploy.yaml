@@ -8,23 +8,44 @@ jobs:
   build:
     name: Build Docusaurus
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: 18
-          # cache: npm
+          version: 10.25.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
 
       - name: Install dependencies
-        run: npm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Create .env config file
-        run: cp example.env .env
+        run: |
+          echo "BLOG_ENABLED=${{ vars.BLOG_ENABLED }}" >> .env
+          echo "DEPLOYMENT_URL=${{ vars.DEPLOYMENT_URL }}" >> .env
+          echo "DEPLOYMENT_BRANCH=${{ vars.DEPLOYMENT_BRANCH }}" >> .env
+          echo "BASE_URL=${{ vars.BASE_URL }}" >> .env
+          echo "GITHUB_ORG=${{ vars.PORTFOLIO_GITHUB_ORG }}" >> .env
+          echo "GITHUB_PROJECT=${{ vars.PORTFOLIO_GITHUB_PROJECT }}" >> .env
+
+      - name: TypeScript type check
+        run: pnpm typecheck
 
       - name: Build website
-        run: npm run build && cp -r build github-pages
+        run: pnpm build
+
+      - name: Prepare GitHub Pages artifact
+        run: cp -r build github-pages
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
@@ -34,14 +55,16 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
-    if: ${{  github.ref_name == github.event.repository.default_branch }}
+    # if: ${{ github.ref_name == github.event.repository.default_branch }}
 
-    # Deploy to the github-pages environment
+    if: ${{ github.ref_name == 'development' }} # Temporär für die Einreichung
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

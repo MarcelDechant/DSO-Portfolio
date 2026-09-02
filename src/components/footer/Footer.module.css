@@ -1,0 +1,118 @@
+.footer {
+    padding: 120px 0;
+    background-color: #262e34;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.upArrowLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upArrow {
+    height: 90px;
+    width: 40px;
+    box-sizing: border-box;
+    object-fit: contain;
+    transition: background-color 0.2s ease;
+}
+
+.upArrow:hover {
+    background-color: rgba(255, 255, 255, 0.089);
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.footerContent p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.footerLinksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footerLinks {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #f8f5ec;
+    text-decoration: none;
+}
+
+.footerLinks:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 80px 24px;
+    }
+
+    .content {
+        gap: 60px;
+    }
+}
+
+
+/* =========================
+   Smartphone
+========================= */
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 0 0 55px;
+    }
+
+    .content {
+        gap: 40px;
+    }
+
+
+    .footerContent {
+        gap: 16px;
+    }
+
+    .footerContent p {
+        font-size: 14px;
+    }
+
+    .footerLinksContainer {
+        gap: 16px;
+    }
+
+    .footerLinks {
+        font-size: 14px;
+    }
+}

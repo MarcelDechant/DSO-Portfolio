@@ -1,0 +1,327 @@
+.contact {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    padding-inline: 120px;
+    background-color: #262e34;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+
+.left {
+    width: 706px;
+}
+
+.left h2 {
+    margin: 0 0 40px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.right {
+    width: 426px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.linkHeader {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.linkHeader {
+    width: 426px;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+
+.left {
+    width: 706px;
+}
+
+.right {
+    width: 248px;
+    padding-left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.contactList {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.contactList li {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.contactList li::marker {
+    font-size: 1.3em;
+}
+
+.contactList li:last-child {
+    margin-bottom: 0;
+}
+
+
+.socialLinks {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.socialLinks:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.socialIcon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.linkText {
+    margin: 0 !important;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+@media (max-width: 1300px) {
+    .contact {
+        padding-inline: 40px;
+    }
+
+    .content {
+        gap: 30px;
+    }
+
+    .left {
+        width: calc(60% - 15px);
+        min-width: 0;
+    }
+
+    .right {
+        width: calc(40% - 15px);
+        min-width: 0;
+    }
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1000px) {
+
+
+    .contentHead {
+        gap: 30px;
+    }
+
+    .contentHead h2 {
+        width: 50%;
+        font-size: 52px;
+    }
+
+    .linkHeader {
+        font-size: 20px;
+    }
+
+    .content {
+        gap: 30px;
+    }
+
+    .left {
+        width: 65%;
+    }
+
+    .right {
+        width: 35%;
+    }
+
+    .socialLinks {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   Small Tablet
+========================= */
+
+@media (max-width: 768px) {
+    .contact {
+        padding-top: 45px;
+        padding-bottom: 55px;
+        padding-inline: 24px;
+    }
+
+    .contentHead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .contentHead h2 {
+        width: 100%;
+        font-size: 46px;
+    }
+
+    .linkHeader {
+        width: 100%;
+        font-size: 18px;
+        padding-left: 0;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right {
+        padding-left: 0;
+    }
+}
+
+
+/* =========================
+   Smartphone
+========================= */
+
+@media (max-width: 600px) {
+    .contact {
+        padding-top: 0;
+        padding-bottom: 40px;
+        padding-inline: 24px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .contentHead {
+        gap: 32px;
+        margin-bottom: 0;
+    }
+
+    .contentHead h2 {
+        width: 100%;
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .linkHeader {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.1;
+        text-align: justify;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .contactList li {
+        font-size: 16px;
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .right {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .socialLinks {
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .socialIcon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .linkText {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   Very small smartphones
+========================= */
+
+@media (max-width: 400px) {
+    .contact {
+        padding-inline: 24px;
+    }
+
+    .contentHead h2 {
+        font-size: 30px;
+    }
+
+    .linkHeader {
+        font-size: 15px;
+    }
+
+    .socialLinks,
+    .linkText {
+        font-size: 15px;
+    }
+}

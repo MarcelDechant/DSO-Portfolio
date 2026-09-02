@@ -1,0 +1,310 @@
+.about {
+    padding-top: 60px;
+    padding-bottom: 72px;
+    padding-inline: 24px;
+    background-color: #266ad9;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1176px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 95px;
+}
+
+
+/* =========================
+   LEFT
+   ========================= */
+
+.left {
+    display: flex;
+    flex-direction: column;
+    max-width: 664px;
+}
+
+.greeting {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    cursor: default;
+}
+
+.name {
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    cursor: default;
+}
+
+.role {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    cursor: default;
+}
+
+.description {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    cursor: default;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.aboutLink {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: #266ad9;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 151px;
+    height: 52px;
+    text-decoration: none;
+    transition: background-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.aboutLinkHover {
+    background-color: #e6e6e6;
+    color: #266ad9;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.about .aboutLinkHover:hover {
+    text-decoration: none;
+    color: #266ad9;
+}
+
+
+/* =========================
+   RIGHT / IMAGE
+   ========================= */
+
+.right {
+    width: clamp(280px, 31vw, 441.62px);
+    aspect-ratio: 441.62 / 479;
+    flex-shrink: 0;
+
+    border-radius: 30px;
+    background-color: rgba(29, 79, 160, 0.67);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.profilePic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================
+   Smaller Desktop / Tablet
+   ========================= */
+
+@media (max-width: 1000px) {
+    .container {
+        gap: 50px;
+    }
+
+    .left {
+        max-width: 560px;
+    }
+
+    .greeting {
+        font-size: 26px;
+    }
+
+    .name {
+        font-size: 64px;
+    }
+
+    .role {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 19px;
+    }
+
+    .right {
+        width: 360px;
+    }
+}
+
+
+/* =========================
+   Tablet / Mobile Layout
+   ========================= */
+
+@media (max-width: 920px) {
+    .about {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    /*
+     * Die Inhalte des linken Bereichs werden direkt
+     * in den Container einsortiert.
+     */
+    .left {
+        display: contents;
+        max-width: 650px;
+    }
+
+    .greeting {
+        order: 1;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+
+    .name {
+        order: 2;
+        font-size: 56px;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+
+    .role {
+        order: 3;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+
+    .right {
+        order: 4;
+        width: min(70vw, 360px);
+        aspect-ratio: 441.62 / 479;
+    }
+
+    .description {
+        order: 5;
+        max-width: 650px;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+
+    .aboutLink {
+        order: 6;
+    }
+}
+
+
+/* =========================
+   Smartphone
+   ========================= */
+
+@media (max-width: 600px) {
+    .about {
+        padding-top: 24px;
+        padding-bottom: 40px;
+        padding-inline: 26px;
+    }
+
+    .container {
+        gap: 24px;
+    }
+
+    .greeting {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    .name {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .role {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    .right {
+        width: min(80vw, 313px);
+        aspect-ratio: 441.62 / 479;
+        border-radius: 30px;
+    }
+
+    .description {
+        max-width: 325px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .aboutLink {
+        width: 129px;
+        height: 47px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+
+/* =========================
+   Very Small Smartphones
+   ========================= */
+
+@media (max-width: 400px) {
+    .about {
+        padding-inline: 20px;
+    }
+
+    .name {
+        font-size: 42px;
+    }
+
+    .greeting {
+        font-size: 20px;
+    }
+
+    .role {
+        font-size: 21px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .right {
+        width: min(80vw, 280px);
+    }
+}

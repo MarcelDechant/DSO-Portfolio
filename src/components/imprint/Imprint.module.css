@@ -1,0 +1,162 @@
+.main {
+    line-height: 1.6;
+    font-size: 16px;
+    background-color: #266ad9;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 72px;
+    padding-inline: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 10px solid #262e34;
+}
+
+.mainContent {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.backLink {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: #266ad9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 230px;
+    height: 52px;
+    gap: 10px;
+    text-decoration: none;
+    padding-inline: 20px;
+    padding-block: 14px;
+    box-sizing: border-box;
+}
+
+.backLink:hover {
+    text-decoration: none;
+    color: #266ad9;
+    background-color: #e6e6e6;
+}
+
+.h1 {
+    font-size: 64px;
+    line-height: 1.15;
+}
+
+.main p {
+    max-width: 1000px;
+}
+
+.h2 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1000px) {
+    .main {
+        padding-inline: 40px;
+    }
+
+    .h1 {
+        font-size: 54px;
+    }
+
+    .h2 {
+        font-size: 40px;
+    }
+}
+
+
+/* =========================
+   Small Tablet
+========================= */
+
+@media (max-width: 768px) {
+    .main {
+        padding-top: 45px;
+        padding-bottom: 55px;
+        padding-inline: 24px;
+    }
+
+    .h1 {
+        font-size: 46px;
+    }
+
+    .h2 {
+        font-size: 36px;
+    }
+
+    .backLink {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================
+   Smartphone
+========================= */
+
+@media (max-width: 600px) {
+    .main {
+        padding-top: 35px;
+        padding-bottom: 45px;
+        padding-inline: 16px;
+        font-size: 16px;
+    }
+
+    .h1 {
+        font-size: 38px;
+    }
+
+    .h2 {
+        font-size: 28px;
+    }
+
+    .backLink {
+        width: 210px;
+        height: 48px;
+        font-size: 17px;
+        padding-inline: 16px;
+        padding-block: 12px;
+    }
+
+    .main p {
+        line-height: 1.55;
+    }
+}
+
+
+/* =========================
+   Very small smartphones
+========================= */
+
+@media (max-width: 400px) {
+    .main {
+        padding-inline: 14px;
+    }
+
+    .h1 {
+        font-size: 34px;
+    }
+
+    .h2 {
+        font-size: 25px;
+    }
+
+    .backLink {
+        width: 195px;
+        font-size: 16px;
+    }
+}
