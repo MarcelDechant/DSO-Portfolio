@@ -34,10 +34,9 @@ const Privacy: React.FC = () => {
 
                 <h2 className={styles.h2}>3. Hosting</h2>
                 <p>
-                    This website is hosted by an external hosting provider. The hosting
-                    provider may process technical data such as IP addresses, access times
-                    and server log files to ensure the secure and reliable operation of the
-                    website.
+                    This website is hosted using GitHub Pages, a hosting service provided
+                    by GitHub, Inc. GitHub may process technical data such as IP addresses,
+                    access times and server log files when the website is accessed.
                 </p>
                 <p>
                     The processing of this data is carried out solely for the purpose of

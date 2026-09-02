@@ -7,10 +7,10 @@ const Footer: React.FC = () => {
     <footer id="footer" className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.content}>
+
           <Link
             to="/#about"
             className={styles.upArrowLink}
-
           >
             <img
               className={styles.upArrow}
@@ -18,13 +18,21 @@ const Footer: React.FC = () => {
               alt="UP"
             />
           </Link>
-          <p>© Marcel Dechant 2026</p>
-          <a className={styles.footerLinks} href="./privacy">
-            Privacy Police
-          </a>
-          <a className={styles.footerLinks} href="./imprint">
-            Imprint
-          </a>
+
+          <div className={styles.footerContent}>
+            <p>© Marcel Dechant 2026</p>
+
+            <div className={styles.footerLinksContainer}>
+              <a className={styles.footerLinks} href="./privacy">
+                Privacy Policy
+              </a>
+
+              <a className={styles.footerLinks} href="./imprint">
+                Imprint
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </footer>
@@ -32,3 +40,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

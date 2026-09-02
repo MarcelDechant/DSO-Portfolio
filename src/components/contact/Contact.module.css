@@ -1,58 +1,110 @@
 .contact {
-    padding-top: 60px;
+    padding-top: 72px;
     padding-bottom: 72px;
-    padding-inline: 16px;
+    padding-inline: 120px;
     background-color: #262e34;
     color: #ffffff;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .container {
     width: 100%;
-    max-width: 1176px;
+    max-width: 1200px;
 }
 
 .content {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    gap: 40px;
-}
-
-.contentHead {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: flex-end;
-    gap: 40px;
-}
-
-.contactText {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 120%;
-    letter-spacing: 0;
-    margin: 0 0 16px 0;
+    gap: 50px;
 }
 
 .left {
-    width: 50%;
+    width: 706px;
+}
+
+.left h2 {
+    margin: 0 0 40px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .right {
-    width: 50%;
-    padding-left: 120px;
-    box-sizing: border-box;
+    width: 426px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
+
+.linkHeader {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.linkHeader {
+    width: 426px;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+
+.left {
+    width: 706px;
+}
+
+.right {
+    width: 248px;
+    padding-left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.contactList {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.contactList li {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.contactList li::marker {
+    font-size: 1.3em;
+}
+
+.contactList li:last-child {
+    margin-bottom: 0;
+}
+
 
 .socialLinks {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 24px;
+    margin: 0;
     color: #ffffff;
     text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .socialLinks:hover {
@@ -64,40 +116,72 @@
     width: 32px;
     height: 32px;
     object-fit: contain;
-}
-
-.linkHeader {
-    width: 50%;
-    padding-left: 120px;
-    box-sizing: border-box;
-    margin: 0;
-    font-size: 18px;
-    line-height: 120%;
+    flex-shrink: 0;
 }
 
 .linkText {
-    text-align: center;
-    height: 100%;
     margin: 0 !important;
     color: #ffffff;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
+@media (max-width: 1300px) {
+    .contact {
+        padding-inline: 40px;
+    }
+
+    .content {
+        gap: 30px;
+    }
+
+    .left {
+        width: calc(60% - 15px);
+        min-width: 0;
+    }
+
+    .right {
+        width: calc(40% - 15px);
+        min-width: 0;
+    }
+}
 
 /* =========================
    Tablet
 ========================= */
 
 @media (max-width: 1000px) {
+
+
     .contentHead {
         gap: 30px;
     }
 
-    .right {
-        padding-left: 50px;
+    .contentHead h2 {
+        width: 50%;
+        font-size: 52px;
     }
 
     .linkHeader {
-        padding-left: 50px;
+        font-size: 20px;
+    }
+
+    .content {
+        gap: 30px;
+    }
+
+    .left {
+        width: 65%;
+    }
+
+    .right {
+        width: 35%;
+    }
+
+    .socialLinks {
+        font-size: 16px;
     }
 }
 
@@ -110,29 +194,30 @@
     .contact {
         padding-top: 45px;
         padding-bottom: 55px;
+        padding-inline: 24px;
     }
 
     .contentHead {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 20px;
-        text-align: center;
+        margin-bottom: 40px;
     }
 
     .contentHead h2 {
+        width: 100%;
         font-size: 46px;
     }
 
     .linkHeader {
         width: 100%;
+        font-size: 18px;
         padding-left: 0;
-        max-width: 600px;
     }
 
     .content {
         flex-direction: column;
         gap: 35px;
-        margin-top: 25px;
     }
 
     .left,
@@ -152,45 +237,64 @@
 
 @media (max-width: 600px) {
     .contact {
-        padding-top: 35px;
-        padding-bottom: 45px;
-        padding-inline: 16px;
+        padding-top: 0;
+        padding-bottom: 40px;
+        padding-inline: 24px;
+    }
+
+    .container {
+        width: 100%;
     }
 
     .contentHead {
-        gap: 15px;
+        gap: 32px;
+        margin-bottom: 0;
     }
 
     .contentHead h2 {
-        font-size: 40px;
-        line-height: 1.15;
+        width: 100%;
+        font-size: 32px;
+        line-height: 1.2;
     }
 
     .linkHeader {
+        width: 100%;
         font-size: 16px;
-        line-height: 1.5;
+        font-weight: 400;
+        line-height: 1.1;
+        text-align: justify;
     }
 
     .content {
-        gap: 30px;
-        margin-top: 20px;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
     }
 
-    .contactText {
+    .left {
+        width: 100%;
+    }
+
+    .contactList li {
         font-size: 16px;
-        line-height: 1.5;
-        margin-bottom: 14px;
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .right {
+        width: 100%;
+        gap: 24px;
     }
 
     .socialLinks {
-        gap: 12px;
+        gap: 8px;
         font-size: 16px;
-        margin-bottom: 18px;
+        font-weight: 500;
     }
 
     .socialIcon {
-        width: 28px;
-        height: 28px;
+        width: 32px;
+        height: 32px;
     }
 
     .linkText {
@@ -204,19 +308,20 @@
 ========================= */
 
 @media (max-width: 400px) {
+    .contact {
+        padding-inline: 24px;
+    }
+
     .contentHead h2 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .linkHeader {
         font-size: 15px;
     }
 
-    .contactText {
-        font-size: 15px;
-    }
-
-    .socialLinks {
+    .socialLinks,
+    .linkText {
         font-size: 15px;
     }
 }

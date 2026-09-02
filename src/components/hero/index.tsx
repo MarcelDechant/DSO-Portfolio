@@ -7,6 +7,7 @@ import styles from './Hero.module.css';
 
 export default function Hero() {
   const [isHover, setIsHover] = useState(false);
+  const profileImage = useBaseUrl('/img/profilbild.png');
   
   return (
     <section id="about" className={styles.about}>
@@ -37,7 +38,7 @@ export default function Hero() {
         <div className={styles.right}>
           <img
             className={styles.profilePic}
-            src={useBaseUrl('/img/profilbild.png')}
+            src={profileImage}
             alt="Profile picture of Marcel Dechant"
           />
         </div>

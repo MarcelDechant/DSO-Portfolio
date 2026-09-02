@@ -90,15 +90,24 @@
     }
 
     .skillCardBack {
-        padding: 20px 25px;
+        padding: 16px 20px;
+        overflow: hidden;
     }
 
     .descHead {
-        font-size: 21px;
+        font-size: 20px;
+        margin-bottom: 8px;
     }
 
-    .descText {
-        font-size: 15px;
+    .descList {
+        margin: 0;
+        padding-left: 18px;
+    }
+
+    .descItem {
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 4px;
     }
 }
 

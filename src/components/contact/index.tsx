@@ -13,29 +13,35 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
-        <div className={styles.contentHead}>
-          <h2>Get in Touch</h2>
-          <p className={styles.linkHeader}>
-            I'm always happy to discuss new opportunities,
-            exciting projects or collaborations.
-          </p>
-        </div>
+
         <div className={styles.content}>
+
           <div className={styles.left}>
-            <p className={styles.contactText}>
-              &middot; Feel free to reach out regarding Frontend, Backend or Fullstack Developer opportunities.
-            </p>
-            <p className={styles.contactText}>
-              &middot; I am a Fullstack Developer with a strong interest in DevSecOps.
-            </p>
-            <p className={styles.contactText}>
-              &middot; Passionate about modern web technologies, automation and continuous learning.
-            </p>
-            <p className={styles.contactText}>
-              &middot; Open to remote and hybrid opportunities.
-            </p>
+            <h2>Get in Touch</h2>
+
+            <ul className={styles.contactList}>
+              <li>
+                Feel free to reach out regarding Frontend, Backend or Fullstack Developer opportunities.
+              </li>
+              <li>
+                I am a Fullstack Developer with a strong interest in DevSecOps.
+              </li>
+              <li>
+                Passionate about modern web technologies, automation and continuous learning.
+              </li>
+              <li>
+                Open to remote and hybrid opportunities.
+              </li>
+            </ul>
           </div>
+
           <div className={styles.right}>
+
+            <p className={styles.linkHeader}>
+              I'm always happy to discuss new opportunities,
+              exciting projects or collaborations.
+            </p>
+
             <a
               className={styles.socialLinks}
               href="mailto:marcel.dechant@freenet.de"
@@ -65,7 +71,9 @@ const Contact: React.FC = () => {
               />
               <p className={styles.linkText}>LinkedIn Profile</p>
             </a>
+
           </div>
+
         </div>
       </div>
     </section>
@@ -73,3 +81,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
